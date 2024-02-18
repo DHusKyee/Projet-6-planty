@@ -92,4 +92,17 @@ function gouts_commander($atts)
 add_shortcode('gouts-commander', 'gouts_commander');
 // Je génère le html retourné par mon shortcode
 
+?>
+
+<?php 
+function wp_admin_specific_css() {
+    if (current_user_can('administrator')) {
+        echo '<style>#menu-item-238 { display: block; }</style>';
+    } else {
+        echo '<style>#menu-item-238 { display: none; }</style>';
+    }
+}
+add_action('wp_head', 'wp_admin_specific_css');
+
+?>
 
