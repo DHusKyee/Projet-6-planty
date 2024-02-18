@@ -92,4 +92,4 @@ function gouts_commander($atts)
 add_shortcode('gouts-commander', 'gouts_commander');
 // Je génère le html retourné par mon shortcode
 
-?>
+
