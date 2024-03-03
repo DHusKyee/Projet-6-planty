@@ -106,3 +106,14 @@ add_action('wp_head', 'wp_admin_specific_css');
 
 ?>
 
+<?php 
+function wp_admin_specific_css_2() {
+    if (current_user_can('administrator')) {
+        echo '<style>#menu-item-235 { display: block; }</style>';
+    } else {
+        echo '<style>#menu-item-235 { display: none; }</style>';
+    }
+}
+add_action('wp_head', 'wp_admin_specific_css');
+
+?>
